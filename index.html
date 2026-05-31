@@ -19,6 +19,12 @@
 
   html { scroll-behavior: smooth; }
 
+
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+  }
   body {
     background: var(--paper);
     color: var(--ink);
@@ -28,6 +34,14 @@
     -webkit-font-smoothing: antialiased;
   }
 
+
+  .inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   /* NAV */
   nav {
     position: sticky;
@@ -94,7 +108,7 @@
 
   /* HERO */
   .hero {
-    padding: 3.5rem 1.5rem 3rem;
+    padding: 3.5rem 0 3rem;
     border-bottom: 1px solid var(--border);
   }
 
@@ -201,7 +215,7 @@
 
   /* WORK SECTION */
   .work {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0;
     border-bottom: 1px solid var(--border);
   }
 
@@ -390,7 +404,7 @@
 
   /* ABOUT */
   .about {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0;
     border-bottom: 1px solid var(--border);
   }
 
@@ -416,7 +430,7 @@
 
   /* CONTACT */
   .contact {
-    padding: 3rem 1.5rem 2.5rem;
+    padding: 3rem 0 2.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.06);
     background: var(--ink);
   }
@@ -460,7 +474,7 @@
 
   /* FOOTER */
   footer {
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -484,6 +498,7 @@
 
 <!-- NAV -->
 <nav>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%">
   <a href="#" class="logo">Michal Chamdi<span>.</span></a>
   <div class="nav-right">
     <ul class="nav-links">
@@ -496,10 +511,13 @@
       <span class="avail-label">Available</span>
     </div>
   </div>
+  </div>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+<div class="inner">
   <div class="hero-label">// Video Editor</div>
   <h1 class="hero-title">Michal<br><em>Chamdi</em></h1>
   <p class="hero-bio">Video editor based in Tel Aviv. I work across cinema, documentary, and editorial — from short films to news features.</p>
@@ -507,6 +525,7 @@
     <a href="#work" class="btn-primary">↓ See the work</a>
     <a href="#contact" class="btn-ghost">Get in touch →</a>
   </div>
+</div>
 </section>
 
 <!-- REEL BAR -->
@@ -535,6 +554,7 @@
 
 <!-- WORK -->
 <section class="work" id="work">
+<div class="inner">
   <div class="sec-label">// Selected work</div>
 
   <div class="filter-row">
@@ -663,13 +683,16 @@
 
 <!-- ABOUT -->
 <section class="about" id="about">
+<div class="inner">
   <div class="sec-label">// About</div>
   <p class="about-text">Cutting stories that <em>need</em> to be told.</p>
   <p class="about-bio">Video editor based in Tel Aviv. I work across cinema, documentary, and editorial — from short films to news features.</p>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
+<div class="inner">
   <div class="sec-label">// Let's talk</div>
   <h2 class="contact-heading">Got a<br>story to<br><em>cut?</em></h2>
   <a href="mailto:monnomestmichal@gmail.com" class="contact-email">monnomestmichal@gmail.com</a>
@@ -677,12 +700,15 @@
     <span>📍 Tel Aviv, Israel</span>
     <span>✈️ Open to travel</span>
   </div>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
+<div class="inner" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;width:100%">
   <span>© 2025 Michal Chamdi</span>
   <span>Video Editor · Tel Aviv</span>
+</div>
 </footer>
 
 <script>
