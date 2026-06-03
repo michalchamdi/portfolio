@@ -383,25 +383,6 @@
   .work-item:hover .work-link { color: var(--punch); }
   .work-link::after { content: '↗'; }
 
-  /* No thumbnail fallback */
-  .work-thumb-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: #1a1917;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .work-item.featured .work-thumb-placeholder {
-    aspect-ratio: 21/9;
-  }
-  .work-thumb-placeholder span {
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.2);
-  }
-
   /* ABOUT */
   .about {
     padding: 3rem 0;
@@ -459,7 +440,7 @@
     border-bottom: 1px solid var(--punch);
     padding-bottom: 2px;
     letter-spacing: 0.02em;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     transition: color 0.15s;
   }
   .contact-email:hover { color: var(--punch); }
@@ -488,7 +469,6 @@
     border-top: 1px solid rgba(255,255,255,0.06);
   }
 
-  /* MOBILE NAV hidden labels */
   @media (max-width: 480px) {
     .avail-label { display: none; }
   }
@@ -512,7 +492,6 @@
     </div>
   </div>
   </div>
-</div>
 </nav>
 
 <!-- HERO -->
@@ -535,7 +514,6 @@
     <span class="reel-item">Documentary</span>
     <span class="reel-item">Editorial</span>
     <span class="reel-item">Adobe Premiere</span>
-    <span class="reel-item">DaVinci Resolve</span>
     <span class="reel-item">After Effects</span>
     <span class="reel-item">Short Film</span>
     <span class="reel-item">News & Magazine</span>
@@ -544,7 +522,6 @@
     <span class="reel-item">Documentary</span>
     <span class="reel-item">Editorial</span>
     <span class="reel-item">Adobe Premiere</span>
-    <span class="reel-item">DaVinci Resolve</span>
     <span class="reel-item">After Effects</span>
     <span class="reel-item">Short Film</span>
     <span class="reel-item">News & Magazine</span>
@@ -566,11 +543,10 @@
 
   <div class="work-grid" id="work-grid">
 
-    <!-- 1. עזיבתה של אנה שלוש — FEATURED -->
     <a href="https://vimeo.com/1091560151" target="_blank" rel="noopener"
        class="work-item featured" data-cat="cinema">
       <div class="work-thumb" style="position:relative">
-        <img src="images/anna-shlush.png" alt="Anna Shalosh's Departure">
+        <img src="images/anna-shlush.png" alt="Anna's Departure">
         <div class="work-thumb-overlay"></div>
         <div class="play-hint"></div>
       </div>
@@ -582,7 +558,6 @@
       </div>
     </a>
 
-    <!-- 2. מה שאני זוכרת מהאש -->
     <a href="https://www.youtube.com/watch?v=MsbpbbuSRUI" target="_blank" rel="noopener"
        class="work-item" data-cat="cinema">
       <div class="work-thumb" style="position:relative">
@@ -598,11 +573,10 @@
       </div>
     </a>
 
-    <!-- 3. כתבת מדבריום -->
     <a href="https://drive.google.com/file/d/1007rRWkPNV7gcAJKVwxMtlEcV5kGNisd/view" target="_blank" rel="noopener"
        class="work-item" data-cat="news">
       <div class="work-thumb" style="position:relative">
-        <img src="images/midbarium.png" alt="Midbariyum">
+        <img src="images/midbarium.png" alt="Midbarium">
         <div class="work-thumb-overlay"></div>
         <div class="play-hint"></div>
       </div>
@@ -614,11 +588,10 @@
       </div>
     </a>
 
-    <!-- 4. תעודת זהות לכתב הצבאי -->
     <a href="https://www.instagram.com/reel/C8pRTixIsdz/" target="_blank" rel="noopener"
        class="work-item" data-cat="news">
       <div class="work-thumb" style="position:relative">
-        <img src="images/mateas.png" alt="Military Correspondent Profile">
+        <img src="images/mateas.png" alt="Instagram Promo">
         <div class="work-thumb-overlay"></div>
         <div class="play-hint"></div>
       </div>
@@ -630,11 +603,10 @@
       </div>
     </a>
 
-    <!-- 5. פידל קסטרו -->
     <a href="https://drive.google.com/file/d/1nupXSv5WU1YJYZX_EPksvlYwNJyKsC3K/view" target="_blank" rel="noopener"
        class="work-item" data-cat="news">
       <div class="work-thumb" style="position:relative">
-        <img src="images/castro.png" alt="Castro">
+        <img src="images/castro.png" alt="Fidel Castro">
         <div class="work-thumb-overlay"></div>
         <div class="play-hint"></div>
       </div>
@@ -646,7 +618,6 @@
       </div>
     </a>
 
-    <!-- 6. ראיון צבי יחזקאלי -->
     <a href="https://www.instagram.com/reel/DFvrfcnu6Nr/" target="_blank" rel="noopener"
        class="work-item" data-cat="news">
       <div class="work-thumb" style="position:relative">
@@ -662,7 +633,6 @@
       </div>
     </a>
 
-    <!-- 7. מינוס אפס -->
     <a href="https://www.youtube.com/watch?v=pSq6SAegGRE" target="_blank" rel="noopener"
        class="work-item" data-cat="music">
       <div class="work-thumb" style="position:relative">
@@ -679,6 +649,7 @@
     </a>
 
   </div>
+</div>
 </section>
 
 <!-- ABOUT -->
@@ -686,7 +657,7 @@
 <div class="inner">
   <div class="sec-label">// About</div>
   <p class="about-text">Cutting stories that <em>need</em> to be told.</p>
-  <p class="about-bio">Video editor based in Tel Aviv. I work across cinema, documentary, and editorial — from short films to news features.</p>
+  <p class="about-bio">Whether capturing the urgency of breaking news or the poetic stillness of a cinematic memory, my work lives in the space where rhythm meets emotion. From award-winning festival shorts to compelling mini-documentaries and editorial pieces, I love crafting visual narratives that stick with the audience long after the screen goes dark. Based in Tel Aviv, always open to the next project. :)</p>
 </div>
 </section>
 
@@ -695,8 +666,9 @@
 <div class="inner">
   <div class="sec-label">// Let's talk</div>
   <h2 class="contact-heading">Got a<br>story to<br><em>cut?</em></h2>
-  <a href="mailto:monnomestmichal@gmail.com" class="contact-email">monnomestmichal@gmail.com</a>
-  <div class="contact-meta">
+  <div><a href="mailto:monnomestmichal@gmail.com" class="contact-email">monnomestmichal@gmail.com</a></div>
+  <div style="margin-top:0.35rem"><a href="tel:+972526184086" class="contact-email">+972 52-618-4086</a></div>
+  <div class="contact-meta" style="margin-top:1.4rem">
     <span>📍 Tel Aviv, Israel</span>
     <span>✈️ Open to travel</span>
   </div>
@@ -712,7 +684,6 @@
 </footer>
 
 <script>
-  // Category filter
   const filterBtns = document.querySelectorAll('.filter-btn');
   const workItems = document.querySelectorAll('.work-item');
 
